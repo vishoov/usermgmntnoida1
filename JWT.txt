@@ -1,0 +1,30 @@
+Based on access control we have 2 categories of routes
+1. public -> can be accessed by anyone 
+2. protected  -> can only be accessed by authenticated users 
+
+history
+1. enter email and password at every request call
+    problem : User experience is very very bad
+
+2. ip address through one device will be kept as authenticated device and any request coming from that device will be considered authorised 
+Problem: if the device is stolen it would be a problem, this is not scalable 
+
+3. Session based authentication 
+a session id is created whenevr a user is logging in 
+and that session id is stores on client and server both sides and whenevr a user sends a request the session id is sent along with it
+then the session id is matched with the one that is kept on the server 
+
+if they match => user is given access
+and if they dont=> user is not allowed access 
+
+Problem:
+1. we cannot store anything on the server 
+2. this is highly vulnerable 
+3. this is not scalable at all
+
+
+JWT Json Web Token 
+
+-> opinionated = it contains user specific information
+-> self contained = it will only create one token and send it to the client side 
+-> lightweight -> very very light format 

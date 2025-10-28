@@ -1,0 +1,8 @@
+creating environment variables 
+
+development security 
+
+where we are hiding development related sensitive information
+Env variables are those variables who are hidden from public access through code, whenever we create env variable they are only kept in our current environment  
+
+npm i dotenv 
